@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Audit Logs</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Workflow Execution Logs</h1>
+
+<div class="log-buttons">
+<button onclick="showAll()">All</button>
+<button onclick="showCompleted()">Completed</button>
+<button onclick="showFailed()">Failed</button>
+</div>
+
+<br>
+
+<table>
+
+<thead>
+<tr>
+<th>Execution ID</th>
+<th>Workflow</th>
+<th>Workflow Name</th>
+<th>Version</th>
+<th>Active</th>
+<th>Status</th>
+<th>Start Time</th>
+<th>End Time</th>
+</tr>
+</thead>
+
+<tbody id="logsBody"></tbody>
+
+</table>
+
+<br>
+
+<div class="nav-buttons">
+
+<button onclick="goHome()">Home</button>
+<button onclick="goWorkflows()">Workflows</button>
+<button onclick="goExecute()">Execute</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+window.onload=function(){
+loadLogs()
+}
+</script>
+
+</body>
+
+</html>

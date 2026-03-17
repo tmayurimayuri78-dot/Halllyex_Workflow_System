@@ -1,0 +1,91 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+<title>Create Workflow</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Create Workflow</h1>
+
+<div class="input-box">
+
+<input id="wf_id" placeholder="Workflow ID">
+
+<input id="wf_name" placeholder="Workflow Name">
+
+<input id="wf_version" placeholder="Version">
+
+<button onclick="createWorkflow()">Create Workflow</button>
+
+</div>
+
+<br>
+
+<div class="nav-buttons">
+
+<button onclick="goHome()">Home</button>
+
+<button onclick="goWorkflows()">Workflows</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+async function createWorkflow(){
+
+const id = document.getElementById("wf_id").value
+const name = document.getElementById("wf_name").value
+const version = document.getElementById("wf_version").value
+
+const data = {
+id:id,
+name:name,
+version:Number(version),
+is_active:true,
+start_step_id:"step1"
+}
+
+await fetch("http://127.0.0.1:8000/workflows",{
+method:"POST",
+headers:{
+"Content-Type":"application/json"
+},
+body:JSON.stringify(data)
+})
+
+alert("Workflow Created Successfully")
+
+window.location.href="workflows.html"
+
+}
+
+function goHome(){
+window.location.href="index.html"
+}
+
+function goWorkflows(){
+window.location.href="workflows.html"
+}
+
+</script><script src="script.js"></script>
+
+<script>
+
+function goHome(){
+window.location.href="index.html"
+}
+
+</script>
+
+</body>
+
+</html>

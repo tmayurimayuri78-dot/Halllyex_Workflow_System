@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Workflows</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>Workflow List</h1>
+
+<button onclick="loadWorkflows()">Load Workflows</button>
+
+<br><br>
+
+<table id="workflowTable">
+
+<thead>
+<tr>
+<th>ID</th>
+<th>Name</th>
+<th>Version</th>
+<th>Status</th>
+<th>Action</th>
+</tr>
+</thead>
+
+<tbody id="workflowBody"></tbody>
+
+</table>
+
+<br>
+
+<div class="nav-buttons">
+
+<button onclick="goHome()">Home</button>
+
+<button onclick="goExecute()">Execute Workflow</button>
+
+<button onclick="goLogs()">Logs</button>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+<script>
+
+function goHome(){
+window.location.href="index.html"
+}
+
+function goExecute(){
+window.location.href="execute.html"
+}
+
+function goLogs(){
+window.location.href="logs.html"
+}
+
+window.onload=function(){
+loadWorkflows()
+}
+
+</script>
+
+</body>
+
+</html>

@@ -2,7 +2,7 @@
 
 <p align="center">
   <b>Dynamic Rule-Based Workflow Execution Engine</b><br>
-  <i>Built with FastAPI, MongoDB & Vanilla JS</i>
+  <i>Built with FastAPI, MongoDB & JS</i>
 </p>
 
 ---
